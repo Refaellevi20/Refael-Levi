@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css main/styles.css"> -->
+    <link rel="stylesheet" href="css page/style.css">
+    <title>Image Gallery</title>
+</head>
+
+<body onload="onInit()">
+
+    <header class="header">
+        <div class="logo">Game of Thrones</div>
+        <nav class="header-right">
+            <button class="nav-btn" onclick="onSaveImg()">Saved</button>
+            <button class="nav-btn">Home</button>
+            <!-- <button class="nav-btn">Edit</button> -->
+        </nav>
+    </header>
+
+    <div class="search-an-img">
+        <label data-trans="search" for="searchThrones">search Thrones</label>
+        <input oninput="onSetFilterBy(this.value)" type="search" name="searchThrones" id="searchThrones"
+            placeholder="Search Thrones">
+    </div>
+
+    <main class="container">
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <!-- <h2>Image Gallery</h2> -->
+            <div class="grid-container grid" onclick="onMouseClick(event)">
+                <img src="./img/team-1.png" alt="Dragon" class="clickable" data-description="Free Dragon">
+                <img src="./img/team-2.png" alt="Knight" class="clickable" data-description="Fire Knight">
+                <img src="./img/team-3.png" alt="Ice Warrior" class="clickable" data-description="Ice Warrior">
+                <img src="./img/team-4.png" alt="Storm Rider" class="clickable" data-description="Storm Rider">
+                <img src="img/team-5.jpg" alt="Shadow Assassin" class="clickable" data-description="Shadow Assassin">
+                <img src="img/team-7.png" alt="Angry Dragon" class="clickable" data-description="Angry Dragon">
+                <img src="img/team-8.png" alt="Guardian of the North" class="clickable"
+                    data-description="Guardian of the North 8">
+                <img src="img/team-9.png" alt="King of the North" class="clickable"
+                    data-description="The King of the North">
+                <img src="img/bander-1.jpg" alt="Black Evil" class="clickable" data-description="Black Evil">
+                <img src="img/bander-2.jpg" alt="Behind the Wall" class="clickable" data-description="Behind the Wall">
+                <img src="img/bander-3.png" alt="World Burning with Evil" class="clickable"
+                    data-description="A World Burning with Evil">
+                <img src="img/bander-4.png" alt="The Greatest Queen" class="clickable"
+                    data-description="The Greatest Queen">
+                <img src="img/bander-5.png" alt="The Winter" class="clickable" data-description="The Winter">
+                <img src="img/bander-6.png" alt="Important Players" class="clickable"
+                    data-description="The Important Players">
+                <img src="img/bander-7.png" alt="The Enchanted Island" class="clickable"
+                    data-description="The Enchanted Island">
+
+                <!-- <img src="./img/team-3.png" alt="Warrior" class="clickable" data-description="Ice Warrior"> -->
+                <!-- Add more images -->
+            </div>
+
+        </section>
+        <div class="modal" id="hoverModal"></div>
+
+        <!-- <nav class="up-down">
+            <ul>
+                <li><i class="fa-solid fa-arrow-up"></i></li>
+                <li><i class="fa-solid fa-arrow-down"></i></li>
+            </ul>
+        </nav>  -->
+
+        <!-- <button class=""></button>
+        <button class=""></button> -->
+
+        <!-- Editor Section -->
+        <section class="editor-section">
+            <h2>Meme Editor</h2>
+            <div class="editor-container">
+                <input type="file" id="imageUpload" accept="image/*">
+                <canvas id="memeCanvas" width="200" height="200"></canvas>
+                <div class="controls">
+                    <input type="text" class="topText" placeholder="Top text">
+                    <input type="text" class="bottomText" placeholder="Bottom text">
+                    <input type="color" class="stokeColor" value="#ffffff">
+                    <input type="color" class="textColor" value="#ffffff">
+                    <!-- <button class="btn-save" type="button" onclick="onSaveImage()">Save Image</button> -->
+                    <form action="" method="POST" enctype="multipart/form-data" onsubmit="onUploadImg(event)">
+                        <input name="img" id="imgData" type="hidden" />
+                        <button class="btn" type="submit">Upload to Cloudinary</button>
+                    </form>
+                    <div class="share-container"></div>
+                    <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download Image from
+                        Canvas</a>
+                </div>
+            </div>
+
+            <div class="gallery-save">
+                <button class="save-btn" onclick="onSave()">save</button>
+                <!-- <h4>save me</h4> -->
+            </div>
+            
+
+        </section>
+
+        <section class="saved-memes-section">
+            <h2>Saved Memes</h2>
+            <div class="saved-memes-container">
+                <!-- Dynamic content will be added here -->
+            </div>
+        </section>
+
+    </main>
+
+    
+
+    <div class="user-msg"></div>
+
+    <script src="renderGallery.js"></script>
+
+    <script src="storage.service.js"></script>
+    <script src="meme_service/unpload.service.js"></script>
+    <script src="meme_service/meme.service.js"></script>
+    <script src="main.js"></script>
+    <script src="controllers/meme.controller.js"></script>
+    <script src="controllers/galleryController.js"></script>
+</body>
+
+</html>

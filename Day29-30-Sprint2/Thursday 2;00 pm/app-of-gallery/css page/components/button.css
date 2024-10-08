@@ -1,0 +1,149 @@
+.saved-memes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.saved-meme {
+    border: 1px solid #f7f5f5;
+    padding: 5px;
+    max-width: 200px;
+    text-align: center;
+}
+
+
+.font-controls.font-center {
+    background-color: rgb(37, 150, 150);
+    color: blueviolet;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-controls button {
+    margin: 5px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.font-controls button i {
+    color: blueviolet;
+}
+
+.text-align-center.aline-center {
+    background-color: rgb(37, 150, 150);
+    color: blueviolet;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aline-center button {
+    margin: 5px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.aline-center button i {
+    color: blueviolet;
+}
+
+.select-line {
+    /* background-color: #0056b3; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
+.addLine-center button {
+    background-color: #c05050;
+    border: 1px solid #c0aeae;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.addLine-center button:hover {
+    background-color: #e0e0e0;
+}
+
+.moving-lines {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px 0; 
+}
+
+.moving-lines button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin: 0 5px; 
+}
+
+.moving-lines button:hover {
+    background-color: #0056b3;
+}
+
+.moving-lines button:focus {
+    outline: none; 
+}
+
+.moving-lines button:active {
+    transform: scale(0.95); 
+}
+
+
+
+button.save-btn {
+    background-color: #f83fdf; ;
+}
+
+button.save-btn:hover {
+    background-color: #007bff; ;
+}
+
+button.save-btn:focus {
+    outline: none; 
+}
+
+button.save-btn:active {
+    transform: scale(0.95); 
+} 
+
+ input#imageUpload{
+align-self: center;
+}
+
+/* .links-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.links-controls a {
+    display: inline-block;
+    text-decoration: none;
+} */
+
+/* button.download {
+    align-items: center;
+} */
+

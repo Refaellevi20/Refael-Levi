@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    /* padding: 0; */
+    background-color: green;
+    /* margin: 0; */
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+h2 {
+    /* margin-top: -60px; */
+    font-size: 2em;
+}
+
+input#question {
+    text-align: center;
+    font-size: 3em;
+}
+
+button {
+    font-size: 3em;
+}
+
+.loader {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.answer {
+    margin-top: 20px;
+}
+
+.answer h2 {
+    font-size: 2em;
+}
+
+.answer img {
+    width: 300px;
+    height: 300px;
+}
+
+.extra {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}

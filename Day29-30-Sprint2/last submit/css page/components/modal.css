@@ -1,0 +1,40 @@
+.modal {
+    display: none; 
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    z-index: 100; 
+}
+
+.modal-hover {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.emoji-select {
+    position: relative;
+    display: inline-block;
+}
+
+.module-wrapper {
+    display: none; /* Initially hide the emoji module */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-height: 200px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.module-wrapper.open {
+    display: block; /* Show the emoji module when open */
+}

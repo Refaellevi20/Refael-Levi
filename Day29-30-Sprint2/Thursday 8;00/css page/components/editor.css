@@ -1,0 +1,50 @@
+.editor-section {
+    display: none;
+}
+
+.gallery-section {
+    display: block;
+}
+
+.search-an-img {
+    display: block;
+}
+
+/* footer a {
+    display: inline-block;
+    transform: translateY(10px);
+    opacity: 0.5; 
+    transition: transform 0.3s ease, opacity 0.3s ease
+} */
+
+.saved-memes-section {
+    display: none;
+}
+
+body {
+    background-color: pink;
+}
+
+.editor-section {
+    background-color: papayawhip;
+}
+
+.topText {
+    color: #ffffff;
+    font-family: Impact, edu, "roboto", sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+option[value="impact"] {
+    font-family: Impact;
+}
+
+option[value="edu"] {
+    font-family: "edu";
+}
+
+/* option[value="roboto"] {
+    font-family: "roboto";
+} */
+

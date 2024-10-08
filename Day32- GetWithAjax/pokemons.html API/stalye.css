@@ -1,0 +1,39 @@
+body {
+    background-color: plum;
+}
+
+
+.pokemon-list {
+    align-self: center;
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-area: 10px;
+    gap: 15px;
+}
+
+li {
+    list-style: none;
+    /* align-items: center;
+    justify-content: center;
+    justify-items: center; */
+    /* justify-self: center; */
+    /* width: 250px; */
+    /* align-self: center; */
+    background-color: red;
+}
+
+h2  p {
+    inset: 0;
+    /* margin:0; */
+    font-size: 0;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}

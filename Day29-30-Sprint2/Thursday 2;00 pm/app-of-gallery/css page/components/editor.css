@@ -1,0 +1,41 @@
+.editor-section {
+    display: none;
+}
+
+.gallery-section {
+    display: block;
+}
+
+.search-an-img {
+    display: block;
+} 
+
+.saved-memes-section {
+    display: none;
+}
+
+body{
+    background-color: pink;
+}
+
+.editor-section {
+background-color: papayawhip;
+}
+
+/* .gallery-save {
+    display: none;
+} */
+
+
+/* .editor-section {
+    display: block;
+}
+
+.gallery-section {
+    display: none;
+} */
+
+ 
+
+
+                       /*! just for the show */

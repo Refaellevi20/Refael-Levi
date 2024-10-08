@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stalye.css">
+    <title>WikiTube</title>
+</head>
+
+<body onload="onInit()">
+
+    <div class="overlay"></div>
+
+    <section class="grid-container">
+        <div class="search-an-img">
+            <input oninput="onSetFilterBy(this.value)" type="search" name="search" id="search"
+                placeholder="Search video">
+            <button data-trans="search" class="search-button">Search</button>
+        </div>
+
+        <div class="video-list"></div>
+        <div class="video-player"></div>
+        <div class="wiki-results"></div>
+    </section>
+
+    <footer class="history-card">
+        <h3>Search History:</h3>
+        <ul id="search-history"></ul>
+        <button onclick="showClearHistoryModal()">Clear History</button>
+        <!-- <button onclick="showClearHistoryModal()" class="loading">
+            <i class="icon fa-solid"></i>
+            <span class="btn-text">Click Me</span>
+          </button> -->
+    </footer>
+
+    <div id="clearHistoryModal" class="modal">
+        <p>Are u sure u want to delete the search history🙃?</p>
+        <button class="btn-clean" onclick="clearHistory()">Yes</button>
+        <button class="btn-no-clean" onclick="hideClearHistoryModal()">No</button>
+    </div>
+
+    <div id="changeThemeModal" class="modal">
+        <p>Select a background color:</p>
+        <canvas id="colorPickerCanvas" width="250" height="250"></canvas>
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button class="btn-no-clean" onclick="applyThemeColor()">OK</button>
+            <button class="btn-clean" onclick="hideChangeThemeModal()">Cancel</button>
+        </div>
+    </div>
+    <button class="change-theme-button" onclick="showChangeThemeModal()">Change Theme</button>
+
+    <script src="service/storage.service.js"></script>
+    <script src="service/service.js"></script>
+    <script src="service/utils.js"></script>
+    <script src="controller.js"></script>
+</body>
+
+</html>

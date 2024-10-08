@@ -1,0 +1,183 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img.clickable {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+img.clickable:hover {
+  transform: scale(1.05);
+}
+
+/** Editor */
+.editor-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* input[type="text"],
+input[type="color"],
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+  width: 100%;
+  max-width: 300px;
+} */
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="color"] {
+  cursor: pointer;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+.user-msg {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 10px;
+  background-color: #47e4f0;
+
+  transition: top 0.5s;
+}
+
+.user-msg.open {
+  top: 10px;
+}
+
+
+button {
+
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+
+h1,
+h3 {
+  font-family: 'lato';
+  color: #506a79;
+}
+
+
+.canvas-container canvas {
+  box-shadow: 0px 30px 30px -20px var(--black);
+  border-radius: 0.5em;
+  margin: auto;
+  margin: 2.5em auto 1em;
+}
+
+img.clickable:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.color-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.color-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.fillColor,
+.stokeColor {
+  margin-top: 5px;
+}
+
+input {
+  align-self: center;
+  width: 200px;
+}
+
+input#imageUpload {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+
+.custom-file-upload:hover {
+  background-color: #45a049;
+}
+
+
+.font-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-controls label {
+  margin-right: 10px;
+}
+
+.fontFamily {
+  margin-right: 10px;
+}

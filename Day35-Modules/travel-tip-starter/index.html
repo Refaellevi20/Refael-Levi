@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>TravelTip</title>
+</head>
+
+<body>
+    <header>
+        <h1>TravelTip</h1>
+        <section class="selected-loc">
+            <!-- <h2>Location: <span class="loc-name"></span> <span class="loc-rate"></span></h2> -->
+            <h4 class="loc-address"></h4>
+            <h4 class="loc-distance"></h4> 
+            <button onclick="app.onCopyLoc()">Copy location</button>
+            <button onclick="app.onShareLoc()">Share location</button>
+            <input name="loc-copier" />
+        </section>
+        <form class="form-search" onsubmit="app.onSearchAddress(event)">
+            <input type="text" name="address" placeholder="Search address" />
+            <button title="Search">🔍</button>
+            <button type="button" title="My Position" onclick="app.onPanToUserPos()" class="btn-user-pos">&nbsp;
+            </button>
+        </form>
+    </header>
+    <main>
+        <div class="overlay" onclick="app.closeModal()"></div>
+        <dialog class="location-dialog ">
+            <form method="dialog" onsubmit="app.onSubmitLocation(event)">
+                <h3 class="dialog-title">Add Location</h3>
+                <label for="locName">Location Name:</label>
+                <input type="text" id="locName" class="loc-name" required placeholder="Enter location name" />
+                
+                <label for="locRate">Rate (1-5):</label>
+                <input type="number" id="locRate" class="loc-rate" min="1" max="5" required placeholder="Rate" />
+                
+                <button type="submit">Submit</button>
+                <button type="button" class="cancel-button" onclick="app.handleCancel()">Cancel</button>
+            </form>
+        </dialog>
+
+        <div class="map"></div>
+        <div>
+            <section class="locs-container">
+                <section class="loc-filter">
+                    <div>
+                        <input type="text" placeholder="Search location"
+                            oninput="app.onSetFilterBy({txt: this.value})" />
+                    </div>
+                    <div>
+                        <label>
+                            Min Rate:
+                            <input type="range" min="0" max="5" value="0" class="filter-rate-range"
+                                onchange="this.title=this.value;app.onSetFilterBy({minRate: this.value})" />
+                        </label>
+                    </div>
+                    <p>
+                        Sort by:
+                        <select class="sort-by" onchange="app.onSetSortBy()">
+                            <option value="name">Name</option>
+                            <option value="rate" selected>Rate</option>
+                            <option value="createdAt" selected>Time</option>
+                        </select>
+                        <label>
+                            <input class="sort-desc" type="checkbox" oninput="app.onSetSortBy()" />
+                            Descending
+                        </label>
+                    </p>
+                </section>
+                <h3 class="loc.distance">Locations</h3>
+                <!-- <span>updatedAt</span> -->
+                <ul class="loc-list"></ul>
+                <section class="loc-stats">
+                    <h3>Statistics</h3>
+                    <div class="loc-stats-rate">
+                        <h4>By rate:</h4>
+                        <div class=" pie"></div>
+                        <ul class=" legend"></ul>
+
+                        <div class="loc-stats-update">
+                            <h4>By update:</h4>
+                        <div class="update-pie pie"></div>
+                        <ul class="update-legend legend"></ul>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <pre class="debug" hidden></pre>
+    <div class="user-msg"></div>
+
+    <!-- <div class="overlay"></div> -->
+    <!-- <div class="overlay" onclick="closeModal()"></div> -->
+
+
+    <div id="changeThemeModal" class="modal">
+        <p>Select a background color:</p>
+        <canvas id="colorPickerCanvas" width="250" height="250"></canvas>
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button class="btn-no-clean" onclick="app.applyThemeColor()">OK</button>
+            <button class="btn-clean" onclick="app.hideChangeThemeModal()">Cancel</button>
+        </div>
+    </div>
+    <button class="change-theme-button" onclick="app.showChangeThemeModal()">Change Theme</button>
+
+
+    <script type="module" src="js/app.controller.js"></script>
+</body>
+
+</html>
+
+

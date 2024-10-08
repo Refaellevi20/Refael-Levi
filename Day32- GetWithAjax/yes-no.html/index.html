@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stayle.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ask Anything</h1>
+    
+    <!-- Input for Yes/No question -->
+    <input type="text" id="question" placeholder="Ask a Yes/No question" pattern=".{3,}\?$" />
+    <button id="askBtn">Ask</button>
+
+    <div class="loader hidden">Loading...</div>
+
+    <div class="answer hidden">
+        <h2></h2>
+        <img src="" alt="Answer Image">
+    </div>
+
+    <div class="extra hidden">
+        <h2>Extra:</h2>
+        <p class="extra-content"></p>
+    </div>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="yesOrNo.service.js"></script>
+    <script src="controller.js"></script>
+    
+</body>
+</html>
